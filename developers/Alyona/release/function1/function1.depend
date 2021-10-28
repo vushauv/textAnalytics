@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1635447547 source:d:\c++\function1\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+
