@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1635455271 source:d:\10if\it\projects\textanalitics\function1\main.cpp
+	<iostream>
+	<string>
+	<windows.h>
+	<fstream>
+	<ctype.h>
+
