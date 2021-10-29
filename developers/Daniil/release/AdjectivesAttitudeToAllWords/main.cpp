@@ -1,6 +1,7 @@
 #include <fstream>
 #include <string>
 #include <windows.h>
+//Обязательно читайте read.me  в текущей дирректории
 
 using namespace std;
 ifstream fin("tests.txt");
@@ -20,9 +21,9 @@ void AdjectivesAttitudeToAllWords(string s) {
 
     //количество прилагательных
 
-    string endings[] = { "àÿ", "ÿÿ", "îå", "åå", "èå", "ûå",
-        "îãî", "åãî", "îìó", "åìó", "îì", "åì", "èõ", "ûõ",
-        "èìè", "ûìè", "èì", "ûì", "óþ", "þþ", "îé", "åé", "ûé", "èé" };
+    string endings[] = { "ая", "яя", "ое", "ие", "ые", "ее",
+        "ого", "его", "ому", "ему", "ом", "ем", "их", "ых",
+        "ими", "ыми", "им", "ым", "ую", "юю", "ой", "ей", "ый", "ий" };
 
     double adjCount = 0;
     for (string end : endings) {
