@@ -8,13 +8,12 @@ int main()
 {
     ifstream fin("input.txt");
     ofstream fout("output.txt");
-    string a="", b;
+    string text="", b;
     while(!fin.eof())
     {
         getline(fin, b);
-        a+=" " + b;
+        text+=" " + b;
     }
-    a.erase(0, 1);
-    fout<<a;
+    text.erase(0, 1);
     return 0;
 }
