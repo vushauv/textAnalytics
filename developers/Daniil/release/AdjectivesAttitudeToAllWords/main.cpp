@@ -7,10 +7,10 @@ ifstream fin("tests.txt");
 ofstream fout("output.txt");
 
 void AdjectivesAttitudeToAllWords(string s) {
-    string punctuationMarks = ". !;:»,?-—";
-    punctuationMarks += char(34);//кавычка
+    string punctuationMarks = ". !;:В»,?-вЂ”";
+    punctuationMarks += char(34);//РєР°РІС‹С‡РєРё
 
-    //Находим количество слов в тексте
+    //РєРѕР»РёС‡РµСЃС‚РІРѕ СЃР»РѕРІ
     double wordCount = 0;
     s = " " + s;
     for (int i = 0; i < s.length()-1; i++) {
@@ -18,11 +18,11 @@ void AdjectivesAttitudeToAllWords(string s) {
             wordCount++;
     }
 
-    //Находим количество прилагательных в тексте
+    //РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРёР»Р°РіР°С‚РµР»СЊРЅС‹С…
 
-    string endings[] = { "ая", "яя", "ое", "ее", "ие", "ые",
-        "ого", "его", "ому", "ему", "ом", "ем", "их", "ых",
-        "ими", "ыми", "им", "ым", "ую", "юю", "ой", "ей", "ый", "ий" };
+    string endings[] = { "Г Гї", "ГїГї", "Г®ГҐ", "ГҐГҐ", "ГЁГҐ", "Г»ГҐ",
+        "Г®ГЈГ®", "ГҐГЈГ®", "Г®Г¬Гі", "ГҐГ¬Гі", "Г®Г¬", "ГҐГ¬", "ГЁГµ", "Г»Гµ",
+        "ГЁГ¬ГЁ", "Г»Г¬ГЁ", "ГЁГ¬", "Г»Г¬", "ГіГѕ", "ГѕГѕ", "Г®Г©", "ГҐГ©", "Г»Г©", "ГЁГ©" };
 
     double adjCount = 0;
     for (string end : endings) {
