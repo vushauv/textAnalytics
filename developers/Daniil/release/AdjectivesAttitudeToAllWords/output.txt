@@ -1,0 +1,6 @@
+Adjectives = 1; Adjectives/Words = 0.5;
+Adjectives = 1; Adjectives/Words = 0.5;
+Adjectives = 0; Adjectives/Words = 0;
+Adjectives = 2; Adjectives/Words = 1;
+Adjectives = 1; Adjectives/Words = 1;
+Adjectives = 1; Adjectives/Words = 0.5;
