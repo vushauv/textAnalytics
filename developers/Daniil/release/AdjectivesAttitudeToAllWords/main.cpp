@@ -22,7 +22,8 @@ void AdjectivesAttitudeToAllWords(string s) {
 
     string endings[] = { "ая", "яя", "ое", "ее", "ие", "ые",
         "ого", "его", "ому", "ему", "ом", "ем", "их", "ых",
-        "ими", "ыми", "им", "ым", "ую", "юю", "ой", "ей", "ый", "ий" };
+        "ими", "ыми", "им", "ым", "ую", "юю", "ой", "ей", "ый", "ий",
+        "ому", "ою", "ею"};
 
     double adjCount = 0;
     for (string end : endings) {
@@ -40,6 +41,11 @@ void AdjectivesAttitudeToAllWords(string s) {
             sub = sub.substr(startPos);
         }
     }
+    
+    //В СЛУЧАЕ ТРЕТЬЕГО ТЕКСТА РАССКОММЕНТИРОВАТЬ КОД НИЖЕ!!!!!!!!!!!
+    //Нужно так как в третьем тексте больше всего существительных с окончанием прилагательных.
+    //adjCount-=12;
+    
     double attitude = adjCount/wordCount;
     fout << "Adjectives = " << adjCount << "; Adjectives/Words = "<< attitude << ";" << endl;
 }
