@@ -1,17 +1,16 @@
 #include <fstream>
 #include <string>
 #include <windows.h>
-//Обязательно читайте read.me  в текущей дирректории
 
 using namespace std;
-ifstream fin("tests.txt");
+ifstream fin("input.txt");
 ofstream fout("output.txt");
 
 void AdjectivesAttitudeToAllWords(string s) {
     string punctuationMarks = ". !;:»,?-—";
-    punctuationMarks += char(34);//кавычки
+    punctuationMarks += char(34);//кавычка
 
-    //количество слов
+    //Находим количество слов в тексте
     double wordCount = 0;
     s = " " + s;
     for (int i = 0; i < s.length()-1; i++) {
@@ -19,9 +18,9 @@ void AdjectivesAttitudeToAllWords(string s) {
             wordCount++;
     }
 
-    //количество прилагательных
+    //Находим количество прилагательных в тексте
 
-    string endings[] = { "ая", "яя", "ое", "ие", "ые", "ее",
+    string endings[] = { "ая", "яя", "ое", "ее", "ие", "ые",
         "ого", "его", "ому", "ему", "ом", "ем", "их", "ых",
         "ими", "ыми", "им", "ым", "ую", "юю", "ой", "ей", "ый", "ий" };
 
@@ -49,11 +48,15 @@ int main()
 {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-    while(!fin.eof()){
-        string s;
-        getline(fin, s);
-        if(s!="")
-            AdjectivesAttitudeToAllWords(s);
-    }
 
+    string s = "", sub;
+    while(!fin.eof())
+    {
+        getline(fin, sub);
+        s+=" " + sub;
+    }
+    s.erase(0, 1);
+    AdjectivesAttitudeToAllWords(s);
+
+    return 0;
 }
