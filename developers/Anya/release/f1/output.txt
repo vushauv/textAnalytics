@@ -1,0 +1,4 @@
+number of sentences: 3
+average sentence length: 3.66667
+number of words: 11
+average word length: 3.72727
