@@ -6,45 +6,36 @@ using namespace std;
 using namespace std::__cxx11;
 /// /////////////////////////////////////////////////////////////////////////
 
-void krajnie_bukvi(string st)
+void tri_podryad(string st)
 {
     ifstream fin("input.txt");
     ofstream fout("output.txt");
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-    int a = 0, b = 0, c = 0, d = 0;
-    string vord, znak = ",.;-Ч", glas = "Єуеыаоэ€ию®”≈џјќЁя»ё";
+    int a = 0, b = 0, k = 0;
+    string glas = "Єуеыаоэ€ию®”≈џјќЁя»ё";
+    string soglas = "йцкнгшщзхъфвпрлджчсмтьб…÷ Ќ√Ўў«’Џ‘¬ѕ–Ћƒ∆„—ћ“№Ѕ";
     st += " ";
-    while(st.find_first_of(znak) != string::npos)///удаление знаков
+
+    for (int i = 0; i < st.size() - 2; i++)///подсчЄт
     {
-        st.insert(st.find_first_of(znak) + 1, " ");
-        st.erase(st.find_first_of(znak), 1);
+        if (glas.find(st[i]) != string::npos && glas.find(st[i+1]) != string::npos)
+            if (glas.find(st[i+2]) != string::npos)
+                a++;///√√√
+        if (soglas.find(st[i]) != string::npos && soglas.find(st[i+1]) != string::npos)
+            if (soglas.find(st[i+2]) != string::npos)
+                b++;///———
     }
-    while(st.size() > 0)
-    {
-        while(st[0] == ' ')///удаление пробелов
-            st.erase(0, 1);
-        if (st.size() == 0)
-            break;
-        vord = st.substr(0, st.find(' '));
-        st.erase(0, st.find(' '));
-        int len = vord.size() - 1;
-            ///проверка букв
-        if (glas.find(vord[0]) != string::npos && glas.find(vord[len]) != string::npos)
-            a++; ///√√
-        else if (glas.find(vord[0]) != string::npos && glas.find(vord[len]) == string::npos)
-            b++; ///√—
-        else if (glas.find(vord[0]) == string::npos && glas.find(vord[len]) != string::npos)
-            c++; ///—√
-        else if (glas.find(vord[0]) == string::npos && glas.find(vord[len]) == string::npos)
-            d++; ///——
-    }
-    fout << "слов, где обе гласные - " << a << endl;
-    fout << "слов, где гласна€-согласна€ - " << b << endl;
-    fout << "слов, где согласна€-гласна€ - " << c << endl;
-    fout << "слов, где обе согласные - " << d << endl;
+    for (int i = 0; i < st.size() - 1; i++)///кол-во слов
+        if (st[i] != ' ' && st[i + 1] == ' ')
+            k++;
+    fout << endl;
+    fout << "всего гласных подр€д - " << a << endl;
+    fout << "в среднем на слово - " << double(a) / k << endl;
+    fout << "всего согласных подр€д - " << b << endl;
+    fout << "в среднем на слово - " << double(b) / k << endl;
 }
-/// //////////////////////////////////////////////////////////////////
+/// ///////////////////////////////////////////////////////////////
 
 int main()
 {
@@ -59,6 +50,6 @@ int main()
         s += " ";
         st += s;
     }
-    krajnie_bukvi(st);
+    tri_podryad(st);
     return 0;
 }
