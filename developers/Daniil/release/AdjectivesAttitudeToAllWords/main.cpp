@@ -42,10 +42,6 @@ void AdjectivesAttitudeToAllWords(string s) {
         }
     }
     
-    //В СЛУЧАЕ ТРЕТЬЕГО ТЕКСТА РАССКОММЕНТИРОВАТЬ КОД НИЖЕ!!!!!!!!!!!
-    //Нужно так как в третьем тексте больше всего существительных с окончанием прилагательных.
-    //adjCount-=12;
-    
     double attitude = adjCount/wordCount;
     fout << "Adjectives = " << adjCount << "; Adjectives/Words = "<< attitude << ";" << endl;
 }
