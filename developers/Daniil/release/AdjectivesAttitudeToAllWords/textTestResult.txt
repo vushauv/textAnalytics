@@ -1,6 +1,4 @@
 Text 1: Adjectives = 38; Adjectives/Words = 0.137681;
 Text 2: Adjectives = 49; Adjectives/Words = 0.167808;
-Text 3: (Если использовать строчку кода для вычета некоторого количества 
-        существительных с такими же окончаниями как и у прилогательных) Adjectives = 43; Adjectives/Words = 0.158672;
-        (Без строчки кода(наверное предпочтительней)) Adjectives = 57; Adjectives/Words = 0.210332;
+Text 3: Adjectives = 57; Adjectives/Words = 0.210332;
 Text 4: Adjectives = 38; Adjectives/Words = 0.127090;
