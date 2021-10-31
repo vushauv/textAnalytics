@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1635617191 source:c:\c++\krajnie_bukvi\main.cpp
-	<fstream>
-	<string>
-	<windows.h>
-
