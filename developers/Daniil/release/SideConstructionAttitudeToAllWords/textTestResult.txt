@@ -1,0 +1,4 @@
+Text 1: Side construction number = 14; Attitude = 0.0507246;
+Text 2: Side construction number = 10; Attitude = 0.0342466;
+Text 3: Side construction number = 10; Attitude = 0.0369004;
+Text 4: Side construction number = 15; Attitude = 0.0501672;
