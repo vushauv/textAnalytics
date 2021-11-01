@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1635795884 source:d:\daniil\others\c++\sideconstructions\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<windows.h>
+	<algorithm>
+
