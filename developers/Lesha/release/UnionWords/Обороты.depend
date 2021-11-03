@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1635862597 source:d:\storage\КОКБЛОКС\Проект\Обороты\main.cpp
+	<fstream>
+	<string>
+	<windows.h>
+
